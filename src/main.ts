@@ -1,6 +1,8 @@
 import {createApp} from 'vue'
-import './style.css'
+import '@/style.css'
+import VueRouter from 'vue-router'//引入vue-router路由模块
 import App from './App.vue'
+import router from "@/router";
 
 
 /**
@@ -10,4 +12,8 @@ import App from './App.vue'
  *      '#app' 是一个 CSS 选择器，它指向 HTML 文件里 id 为 app 的元素。
  *      一般在 index.html 文件里会有类似 <div id="app"></div> 的元素，Vue 应用会将这个元素作为挂载点，把根组件 App 的内容渲染到这个元素中。
  */
-createApp(App).mount('#app')
+
+const app = createApp(App);
+app.use(router);
+app.use(VueRouter);
+app.mount('#app')

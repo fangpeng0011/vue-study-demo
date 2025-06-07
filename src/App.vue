@@ -8,29 +8,15 @@
 
 -->
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-
-console.log("setup")
-const messageSetUp = "HelloWorld"
-const logMessage = () => {
-  console.log(messageSetUp)
-}
-
 /**
  *  setup的执行时机，在beforeCreate之前执行。
  *  setup特点是：定义数据+函数 然后以对象的方式return出去
  *  <script setup> 经过语法糖的封装更简单的使用组合式API
  *  setup中的this指向的是undefined
  */
-
 </script>
-
 <template>
-  <div>{{ messageSetUp }}</div>
-  <button @click="logMessage">Log Message</button>
-  <div>
-    <HelloWorld msg="Vite + Vue"/>
-  </div>
+  <RouterView/>
 </template>
 
 <style scoped>
